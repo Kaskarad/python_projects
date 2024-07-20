@@ -1,20 +1,14 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # Создаем пустой словарь для хранения пар "значение - индекс"
-        tracker = dict()
+tracker = dict()
 
-        # Проходим по каждому элементу списка nums
-        for i, val in enumerate(nums):
-            # Вычисляем разницу между target и текущим элементом списка
-            rem = target - val
+nums = [1, 2, 5 ,7]
+target = 12
+for i, val in enumerate(nums):
 
-            # Проверяем, есть ли разница в словаре tracker
-            if rem in tracker:
-                # Если да, возвращаем индексы элементов, сумма которых равна target
-                return [tracker[rem], i]
+    rem = target - val
 
-            # Добавляем пару "значение - индекс" в словарь tracker
-            tracker[val] = i
+    if rem in tracker:
+        print([tracker[rem], i])
 
-        # Если мы дошли до конца цикла без нахождения решения, возвращаем пустой список
-        return []
+    tracker[val] = i
+
+print([])
