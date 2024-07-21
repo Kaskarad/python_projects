@@ -20,7 +20,7 @@ class User:
             self.borrowed_books.append(book)
             print(f"{self.name} взял книгу '{book.title}'")
         else:
-            print(f"Книга '{book.title}' недоступна")
+            print(f"Книга '{book.titlgire}' недоступна")
 
     def return_book(self, book):
         if book in self.borrowed_books:
